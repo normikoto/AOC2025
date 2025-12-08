@@ -43,4 +43,8 @@ public class Day2 {
         IO.println("Part 1: " + part1);
         IO.println("Part 2: " + part2);
     }
+
+    static void main() throws IOException {
+        run("src/main/resources/input-day-2");
+    }
 }
