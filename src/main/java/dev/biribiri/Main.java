@@ -11,5 +11,6 @@ public class Main {
         Day2.run("src/main/resources/input-day-2");
 
         IO.println("== Day 3 ==");
+        Day3.run("src/main/resources/input-day-3");
     }
 }
