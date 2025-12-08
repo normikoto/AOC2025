@@ -23,22 +23,21 @@ public class Day3 {
     private static long getJoltage(String line, int n) {
         StringBuilder batteries = new StringBuilder();
 
-        String newLine = line;
         for (int i = 0; i < n; i++) {
             int maxIdx = 0;
-            for (int j = 0; j < newLine.length() - (n - i - 1); j++) {
-                if (newLine.charAt(j) > newLine.charAt(maxIdx)) {
+            for (int j = 0; j < line.length() - (n - i - 1); j++) {
+                if (line.charAt(j) > line.charAt(maxIdx)) {
                     maxIdx = j;
                 }
             }
-            batteries.append(newLine.charAt(maxIdx));
-            newLine = newLine.substring(maxIdx + 1);
+            batteries.append(line.charAt(maxIdx));
+            line = line.substring(maxIdx + 1);
         }
 
         return Long.parseLong(batteries.toString());
     }
 
-    static void main(String[] args) throws IOException {
+    static void main() throws IOException {
         run("src/main/resources/input-day-3");
     }
 }
